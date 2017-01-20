@@ -52,4 +52,3 @@ library
 --      Text.Parse.Text
   cpp-options:		-DVERSION="1.12"
   nhc98-options:	-K6M
-  extensions:		CPP

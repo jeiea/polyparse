@@ -8,6 +8,7 @@
 --   This module defines a Parser type (capable of use with the Poly
 --   combinators), specialised to the callback-lexer style of input stream.
 
+{-# LANGUAGE CPP #-}
 module Text.ParserCombinators.Poly.Lex
   ( -- * The Parser datatype
     LexReturn(..)
@@ -34,7 +35,7 @@ import Control.Applicative
 -- | In a strict language, where creating the entire input list of tokens
 --   in one shot may be infeasible, we can use a lazy "callback" kind of
 --   architecture instead.  The lexer returns a single token at a time,
---   together with a continuation.  The @next@ parser is responsible for 
+--   together with a continuation.  The @next@ parser is responsible for
 --   pulling on the token stream, applying the continuation where necessary.
 data LexReturn t = LexReturn t String (String->LexReturn t)
                  | LexFinish

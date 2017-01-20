@@ -1,3 +1,4 @@
+{-# LANGUAGE CPP #-}
 module Text.ParserCombinators.Poly.ByteString
   ( -- * The Parser datatype
     Parser(P)

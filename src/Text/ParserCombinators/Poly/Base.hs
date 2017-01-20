@@ -1,3 +1,4 @@
+{-# LANGUAGE CPP #-}
 module Text.ParserCombinators.Poly.Base
   ( -- * The PolyParse classes
     Commitment(..)	-- class of all two-level-error values
@@ -164,7 +165,7 @@ sepBy1 p sep = do { x <- p
                   ; return (x:) `apply` many (do {sep; p})
                   }
          `adjustErr` ("When looking for a non-empty sequence with separators:\n\t"++)
- 
+
 -- | Parse a list of items, discarding the start, end, and separator
 --   items.
 bracketSep :: PolyParse p => p bra -> p sep -> p ket -> p a -> p [a]

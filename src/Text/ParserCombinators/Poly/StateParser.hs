@@ -2,6 +2,7 @@
 --   running state.  These are the parts that are shared between the State
 --   and StateLazy variations.  Do not import this module directly, but only
 --   via T.P.Poly.State or T.P.Poly.StateLazy.
+{-# LANGUAGE CPP #-}
 module Text.ParserCombinators.Poly.StateParser
   ( -- * The Parser datatype
     Parser(P)	-- datatype, instance of: Functor, Monad, PolyParse
