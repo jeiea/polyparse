@@ -71,7 +71,7 @@ infixl 3 `discard`
 
 -- | Apply a parsed function to a parsed value.
 --   Rather like ordinary function application lifted into parsers.
-apply  :: PolyParse p => p (a->b) -> p a -> p b
+apply :: PolyParse p => p (a->b) -> p a -> p b
 apply = (<*>)
 
 -- | @x `discard` y@ parses both x and y, but discards the result of y.
